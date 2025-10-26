@@ -1,0 +1,368 @@
+@import url('[https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap)');
+
+/* ============== VARIABLES ============== */
+:root {
+--bg-1: #0b0e1a;
+--bg-2: #2d2150;
+--accent: #ef86b7;
+--accent-2: #cba3ff;
+--white: #fff;
+--muted: #cdb8d8;
+--glass: rgba(255, 255, 255, 0.08);
+--glass-brd: rgba(255, 255, 255, 0.2);
+--radius: 16px;
+--shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* ============== BASE ============== */
+
+* {
+  box-sizing: border-box;
+  }
+  html,
+  body {
+  height: 100%;
+  }
+  body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  background: linear-gradient(135deg, #1e0033, #2b0a57, #401b8c);
+  overflow-x: hidden;
+  background-image: url("../img/kpop-idol-anime.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  }
+
+/* ============== HEADER ============== */
+.site-header {
+position: fixed;
+inset: 0 0 auto 0;
+height: 64px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+z-index: 10;
+}
+
+.inicio-btn {
+background: linear-gradient(135deg, #ff66cc, #9966ff);
+border: none;
+padding: 10px 20px;
+border-radius: 999px;
+font-weight: 700;
+color: #130a1f;
+cursor: pointer;
+box-shadow: 0 0 20px #ff66cc;
+transition: 0.3s;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+text-decoration: none;
+}
+.inicio-btn:hover {
+transform: scale(1.05);
+box-shadow: 0 0 30px #ff99ff;
+}
+
+.header-right {
+color: var(--white);
+font-size: 14px;
+}
+.header-right a {
+color: #00f7ff;
+font-weight: 700;
+text-shadow: 0 0 10px #00f7ff;
+}
+
+/* ============== LAYOUT ============== */
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 64px; /* conserva espacio para el header */
+}
+
+
+.left {
+display: flex;
+justify-content: center;
+align-items: center;
+height: calc(100vh - 64px);
+padding: 40px;
+position: relative;
+}
+
+.right {
+background-size: cover;
+background-position: center;
+filter: brightness(0.78);
+}
+
+/* ============== CARD ============== */
+.card {
+width: 100%;
+max-width: 480px;
+background: rgba(0, 0, 0, 0.55);
+border: 1px solid var(--glass-brd);
+border-radius: var(--radius);
+backdrop-filter: blur(18px);
+box-shadow: 0 0 25px rgba(255, 105, 180, 0.3),
+0 0 45px rgba(128, 90, 255, 0.3);
+padding: 40px 36px;
+animation: fadeIn 0.8s ease, float 4s ease-in-out infinite;
+text-align: center;
+}
+
+.title {
+font-size: 26px;
+font-weight: 800;
+margin: 0 0 10px;
+color: var(--accent);
+text-shadow: 0 0 10px var(--accent);
+}
+
+/* ============== TABS ============== */
+.tabs {
+display: flex;
+gap: 10px;
+margin: 12px 0 18px;
+justify-content: center;
+}
+.tab {
+padding: 8px 14px;
+border-radius: 20px;
+cursor: pointer;
+border: none;
+background: transparent;
+color: var(--muted);
+font-weight: 700;
+transition: 0.3s;
+}
+.tab.active {
+background: linear-gradient(135deg, var(--accent), var(--accent-2));
+color: #130a1f;
+box-shadow: 0 0 10px var(--accent);
+}
+.tab:hover {
+transform: scale(1.1);
+}
+
+/* ============== FORM ============== */
+label {
+font-size: 12px;
+color: #e9ddfb;
+}
+input {
+width: 100%;
+padding: 12px;
+border-radius: 10px;
+border: 1px solid var(--glass-brd);
+background: rgba(255, 255, 255, 0.06);
+color: var(--white);
+transition: 0.3s;
+}
+input:focus {
+outline: none;
+box-shadow: 0 0 10px var(--accent);
+border-color: var(--accent);
+}
+input::placeholder {
+color: #ffffffcc;
+}
+
+.row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+}
+.actions {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+margin-top: 8px;
+}
+
+.primary {
+flex: 1;
+background: linear-gradient(135deg, #ff66cc, #9966ff);
+border: none;
+border-radius: 10px;
+padding: 12px 16px;
+font-weight: 700;
+cursor: pointer;
+color: #130a1f;
+transition: 0.3s;
+box-shadow: 0 0 15px #ff66cc;
+}
+.primary:hover {
+transform: scale(1.05);
+box-shadow: 0 0 30px #ff99ff;
+}
+
+.link {
+background: none;
+border: none;
+color: #ffb6ff;
+cursor: pointer;
+text-decoration: underline;
+transition: 0.3s;
+}
+.link:hover {
+color: #fff;
+text-shadow: 0 0 10px #ff99ff;
+}
+
+/* ============== REDES ============== */
+.socials {
+display: flex;
+justify-content: center;
+gap: 15px;
+margin-top: 15px;
+}
+.social-btn {
+width: 45px;
+height: 45px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+color: #fff;
+font-size: 20px;
+cursor: pointer;
+transition: 0.3s;
+box-shadow: 0 0 10px #ff99ff;
+border: none;
+}
+.social-btn.google {
+background: linear-gradient(135deg, #ff66cc, #9966ff);
+}
+.social-btn.facebook {
+background: linear-gradient(135deg, #1877f2, #8ab4f8);
+}
+.social-btn.instagram {
+background: linear-gradient(135deg, #feda75, #d62976, #962fbf, #4f5bd5);
+}
+.social-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 0 25px #fff;
+}
+
+/* ============== TEXTOS ============== */
+.terms {
+margin-top: 1.2em;
+text-align: center;
+font-size: 13px;
+color: var(--muted);
+}
+.terms a {
+color: #fff;
+text-shadow: 0 0 8px var(--accent);
+}
+
+/* ============== PANELS ============== */
+.panel {
+display: none;
+}
+.panel.active {
+display: block;
+animation: fadeIn 0.6s ease;
+}
+
+/* ================== FOOTER ================== */
+footer {
+  background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
+  color: #ccc;
+  text-align: center;
+  padding: 2em 1em;
+  box-shadow: 0 -4px 10px rgba(255, 79, 216, 0.5);
+  margin-top: 3em;
+}
+
+.footer-info p {
+  margin: 0.2em 0;
+  font-size: 1em;
+  color: #f5efef;
+}
+
+.footer-copy p {
+  margin-top: 1.5em;
+  font-size: 0.9em;
+  color: #f3efef;
+  font-style: italic;
+}
+
+.footer-socials {
+  margin-top: 1em;
+}
+
+/* ==== BOTONES DE REDES ==== */
+.footer-socials a {
+  margin: 0 10px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 700;
+  display: inline-block;
+  transition: all 0.3s ease;
+  color: #ffffff;              /* ?? texto blanco */
+  text-decoration: none;       /* ?? sin subrayado */
+  line-height: normal;         /* ?? sin línea base fantasma */
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+/* Hover más suave */
+.footer-socials a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+
+
+/* ============== RESPONSIVE ============== */
+@media (max-width: 980px) {
+.wrap {
+grid-template-columns: 1fr;
+}
+.right {
+height: 42vh;
+}
+.row {
+grid-template-columns: 1fr;
+}
+}
+
+/* ============== ANIMACIONES ============== */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(-12px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes float {
+0%,
+100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-6px);
+}
+}

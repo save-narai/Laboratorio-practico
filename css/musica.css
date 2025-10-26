@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* ================== TOKENS ================== */
+:root{
+  --c-bg: #000;
+  --c-text: #faf5f5;
+  --c-white: #fff;
+  --c-primary: #ff4fd8;
+  --c-primary-2: #cb08f1;
+  --c-acc-1: #58fcd8;
+  --c-acc-2: #ff0099;
+
+  --glow-sm: 0 0 10px var(--c-primary), 0 0 20px var(--c-primary-2);
+  --glow-md: 0 0 15px var(--c-primary), 0 0 25px var(--c-primary-2);
+
+  --ff-base: 'Segoe UI', Arial, sans-serif;
+  --ff-title: 'Poppins', sans-serif;
+
+  --fs-h1: clamp(1.8rem, 2.5vw + 1rem, 2.5rem);
+  --fs-h2: clamp(1.1rem, 1.2vw + .8rem, 1.25rem);
+  --fs-body: clamp(0.95rem, 0.4vw + .8rem, 1rem);
+
+  --t-fast: .3s;
+  --t-med: .5s;
+  --t-slow: .8s;
+}
+
+/* ================== BASE ================== */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--ff-base);
+  color:var(--c-text);
+  line-height:1.6;
+  background:var(--c-bg);
+  font-size:var(--fs-body);
+}
+h1,h2{font-family:var(--ff-title);letter-spacing:1px;margin:0 0 .5em}
+a{color:inherit;text-decoration:none}
+
+
+
+
+
+/* HERO */
+.hero-video {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* 馃帴 Video fondo */
+.background-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* 馃寫 Overlay solo para oscurecer video */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+/* ================== NAV ================== */
+.hero-header {
+  position: relative;
+  padding-top: 30px;
+  text-align: center;
+  z-index: 2;
+}
+
+/* 馃専 T铆tulo con efecto neon + animaci贸n scroll */
+.titulo-neon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  animation: fadeInOut 5s ease forwards;
+}
+
+/* Men煤 mejor centrado y adaptable */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+nav .menu a {
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid var(--c-primary);
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+nav .menu a:hover,
+nav .menu a.activo {
+  background: var(--c-acc-1);
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--c-primary-2), 0 0 25px var(--c-primary-2);
+}
+
+
+
+
+.header-right {
+color: var(--white);
+font-size: 14px;
+}
+.header-right a {
+color: #00f7ff;
+font-weight: 800;
+text-shadow: 0 0 10px #00f7ff;
+}  
+
+/* ================== TEXTO CENTRAL ================== */
+.hero-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2.2rem; /* Aumentado el tama?o */
+  font-weight: bold;
+  z-index: 2;
+
+  color: #ffffff; /* Letras blancas */
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke: 0px; /* Quitamos el borde negro */
+
+  /* Sombra azul con morado */
+  text-shadow:
+    0 0 6px #8a2be2,
+    0 0 12px #6a0dad,
+    0 0 18px #00bfff,
+    0 0 24px #8a2be2;
+
+  /* Puedes mantener esta animación si quieres movimiento */
+  animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { text-shadow: 0 0 6px #8a2be2, 0 0 12px #6a0dad, 0 0 18px #00bfff, 0 0 24px #8a2be2; }
+  50% { text-shadow: 0 0 12px #00bfff, 0 0 18px #8a2be2, 0 0 24px #6a0dad, 0 0 30px #00bfff; }
+  100% { text-shadow: 0 0 6px #8a2be2, 0 0 12px #6a0dad, 0 0 18px #00bfff, 0 0 24px #8a2be2; }
+}
+
+
+/* ================== ANIMACIONES ================== */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes neonPulse {
+  from {
+    text-shadow: 
+      0 0 5px #ff00cc,
+      0 0 15px #00fff7,
+      0 0 30px #ffffff,
+      0 0 45px #00fff7;
+  }
+  to {
+    text-shadow: 
+      0 0 15px #ff00cc,
+      0 0 25px #00fff7,
+      0 0 40px #ffffff,
+      0 0 70px #00fff7;
+  }
+}
+
+@keyframes fadeInOut {
+  0%   {opacity: 0; transform: translateY(20px) scale(0.9);}
+  30%  {opacity: 1; transform: translateY(0) scale(1);}
+  80%  {opacity: 1; transform: scale(1);}
+  100% {opacity: 0.9; transform: scale(0.95);}
+}
+
+/* 馃敼 Correcci贸n: evitar superposici贸n en pantallas chicas */
+@media (max-width: 600px) {
+  .hero-text {
+    font-size: 1.2rem;
+    top: 65%;
+    padding: 0 1rem;
+  }
+  .titulo-neon {
+    font-size: 1.8rem;
+  }
+  nav .menu a {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+:root {
+  --card-w: 300px;        /* ancho de cada tarjeta */
+  --card-h: 180px;        /* alto del video */
+  --gap: 2cm;             /* separaci贸n entre tarjetas */
+  --speed-seconds: 30s;   /* velocidad del loop (m谩s alto = m谩s lento) */
+  --expand-scale: 1.25;   /* cu谩nto se expande la tarjeta */
+}
+
+/* Secci贸n de galer铆a */
+.video-galeria {
+  padding: 3.5em 1em;
+  background: #000;
+  color: #fff;
+}
+
+/* 馃幎 T铆tulo categor铆as con sombra neon */
+.titulo-categorias {
+  font-size: 2.2rem;
+  margin: 2em 0;
+  text-align: center;
+  color: #fff;
+  text-shadow: 
+    0 0 5px #ff00cc, 
+    0 0 10px #00fff7, 
+    0 0 20px #ff00cc;
+}
+
+/* Contenedor del carrusel */
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;     /* 馃攽 evita que se arrastre el resto del contenido */
+  padding: 36px 0;      /* espacio extra para que al expandir no se corte */
+  box-sizing: border-box;
+}
+
+/* Track que se mueve en loop */
+.slider-track {
+  display: flex;
+  gap: var(--gap);
+  width: max-content;
+  align-items: center;
+  animation: ticker linear infinite;
+  animation-duration: var(--speed-seconds);
+  will-change: transform;
+}
+
+/* Grupo de tarjetas (original + duplicado) */
+.slider-group {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+}
+
+/* Tarjetas */
+.card-video {
+  flex: 0 0 var(--card-w);
+  width: var(--card-w);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 0, 180, 0.25);
+  transition: transform .28s cubic-bezier(.2, .9, .2, 1), 
+              box-shadow .28s, 
+              z-index 0s;
+  transform-origin: center center;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  outline: none;
+}
+
+/* Iframe dentro de la tarjeta */
+.card-video iframe {
+  width: 100%;
+  height: var(--card-h);
+  border: none;
+  display: block;
+}
+
+/* Texto debajo del video */
+.card-video p {
+  padding: .7em;
+  font-weight: 600;
+  margin: 0;
+}
+.card-video p a { 
+  color: #fff; 
+  text-decoration: none; 
+}
+.card-video p a:hover { 
+  color: #00fff7; 
+}
+
+/* Efecto al expandir */
+.card-video:hover,
+.card-video.expanded,
+.card-video:focus {
+  transform: scale(var(--expand-scale)) translateZ(0);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6), 
+              0 0 30px #ff00cc;
+  z-index: 30;
+}
+
+/* Pausa al pasar el mouse por encima */
+.slider-wrapper:hover .slider-track,
+.slider-wrapper.paused .slider-track {
+  animation-play-state: paused;
+}
+
+/* Copia duplicada no debe ser interactiva */
+.slider-group[aria-hidden="true"] .card-video { 
+  pointer-events: none; 
+}
+
+/* Animaci贸n infinita */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* se mueve la mitad porque hay 2 bloques */
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  :root { 
+    --card-w: 260px; 
+    --card-h: 160px; 
+    --speed-seconds: 26s; 
+  }
+}
+@media (max-width: 560px) {
+  :root { 
+    --card-w: 200px; 
+    --card-h: 130px; 
+    --speed-seconds: 32s; 
+    --expand-scale: 1.12; 
+  }
+}
+
+
+
+
+
+
+
+/* Secci贸n principal time line */
+
+/* Timeline */
+.timeline {
+  padding: 3em 1em;
+  background: url('fondo-kpop.jpg') no-repeat center center/cover;
+  text-align: center;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.timeline h2 {
+  font-size: 2.2rem;
+  margin: 2em 0;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 
+    0 0 5px #ff00cc,
+    0 0 10px #00fff7,
+    0 0 20px #ff00cc;
+}
+
+
+
+
+/* A帽o botones */
+/* Botones a帽os */
+.year-toggle {
+  width: 95%;
+  padding: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 1em 0;
+  color: #fff;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  box-shadow: 0 0 15px #ff00cc, 0 0 25px #3333ff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.year-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff00cc, 0 0 40px #3333ff;
+}
+
+/* Contenido oculto */
+.year-content {
+  display: none;
+  margin-bottom: 2em;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.year-content.active {
+  display: block;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5em;
+}
+
+/* Items */
+.timeline-item {
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(255,0,200,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255,0,200,0.9);
+}
+
+.timeline-item video {
+  width: 100%;
+  height: 160px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.timeline-item .group {
+  display: block;
+  font-weight: bold;
+  color: #ff4fd8;
+  margin-bottom: 0.5em;
+  text-shadow: 0 0 8px rgba(255,0,200,0.8);
+}
+
+/* Animaci贸n */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+
+
+
+
+
+
+
+/* ================== Playlist ================== */
+
+
+.playlist {
+  text-align: center;
+  margin: 2rem 0;
+}
+.playlist h2 {
+  font-size: 2.2rem;
+  margin: 2em 0;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 
+    0 0 5px #ff00cc,
+    0 0 10px #00fff7,
+    0 0 20px #ff00cc;
+}
+
+.playlist-container {
+  display: flex;
+  justify-content: center;
+}
+
+.playlist-container iframe {
+  width: 95%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+.encuesta {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.poll-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.option-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.option-card:hover {
+  transform: scale(1.05);
+  background: #ffebee;
+}
+
+.option-card input {
+  display: none;
+}
+
+.vote-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: #ff4081;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.vote-btn:hover {
+  background: #f50057;
+}
+
+
+
+
+
+
+/* ================== ENCUESTA ================== */
+
+/* ================== ENCUESTA ================== */ .encuesta { max-width: 90%; margin: 2rem auto; padding: 1.5rem; background: linear-gradient(135deg, #000, #555, #fff); border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* Animaci贸n de entrada */ opacity: 0; transform: translateY(30px); animation: fadeUp 1.2s ease forwards; } @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } } .hero-text { position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 1.7rem; font-weight: bold; z-index: 2; color: transparent; background: linear-gradient(270deg, #ff00cc, #00fff7, #ffffff, #ff00cc); background-size: 600% 600%; -webkit-background-clip: text; background-clip: text; text-shadow: 0 0 10px #ff00cc, 0 0 20px #00fff7, 0 0 40px #ffffff, 0 0 60px #00fff7; animation: gradientMove 6s ease infinite, neonPulse 2s infinite alternate; } /* Opciones de la encuesta */ .poll-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin: 1rem 0; } .option-card { padding: 1rem; border-radius: 12px; text-align: center; cursor: pointer; font-weight: bold; color: #000; transition: 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Animaci贸n de pulso suave */ animation: pulse 3s infinite ease-in-out; } @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 10px rgba(0,0,0,0.2); } 50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(0,0,0,0.3); } 100% { transform: scale(1); box-shadow: 0 0 10px rgba(0,0,0,0.2); } } .option-card input { display: none; } .option-card:hover { transform: scale(1.08) rotate(-1deg); box-shadow: 0 6px 18px rgba(0,0,0,0.35); } /* Cuando el usuario selecciona una opci贸n */ input[type="radio"]:checked + label, .option-card:has(input:checked) { border: 3px solid #ff4081; box-shadow: 0 0 20px #ff4081; } /* Colores por grupo */ .bts { background: #ff80ab; } /* Rosa */ .ateez { background: #ff7043; } /* Naranja */ .skz { background: #b39ddb; } /* Morado */ .exo { background: #cfd8dc; } /* Gris met谩lico */ .svt { background: #81d4fa; } /* Celeste */ .mx { background: #90caf9; } /* Azul claro */ .bb { background: #ffe082; } /* Amarillo suave */ /* Bot贸n enviar */ .vote-btn { display: block; margin: 1rem auto 0; padding: 0.8rem 1.5rem; font-size: 1rem; border: none; border-radius: 12px; background: linear-gradient(90deg, #ff4081, #4dd0e1, #fff); background-size: 200% 200%; color: #000; font-weight: bold; cursor: pointer; transition: transform 0.3s ease; animation: gradientShift 4s infinite alternate; } .vote-btn:hover { transform: scale(1.08); } @keyframes gradientShift { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } } /* Mensaje de confirmaci贸n */ .poll-message { text-align: center; margin-top: 1rem; font-weight: bold; font-size: 1.1rem; display: none; }
+
+
+
+/* ===== BOTONES LOGIN & REGISTRO ===== */
+/* Sobrescribir reglas generales de nav .menu a */
+.menu a.nav-auth {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 2px solid #00f7ff; /* Agua marina */
+  font-weight: bold;
+  font-size: 0.95em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  color: #00f7ff; /* Agua marina */
+  background: transparent;
+  text-decoration: none; /* Quita subrayado */
+}
+
+/* Iconos dentro de los botones */
+.menu a.nav-auth i {
+  font-size: 1.1em;
+}
+
+/* Hover: rosado pálido */
+.menu a.nav-auth:hover {
+  background: #f8a5c2; /* Rosado pálido */
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffb6c1, 0 0 25px #ffb6c1;
+  border-color: transparent;
+}
+
+/* Etiqueta de texto dentro del botón */
+.menu a.nav-auth .label-auth {
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ================== FOOTER ================== */
+footer{
+  background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);
+  color:#ccc;text-align:center;padding:2em 1em;
+  box-shadow:0 -4px 10px rgba(255,79,216,.5);margin-top:3em;
+}
+.footer-info p{margin:.2em 0;font-size:1em;color:#f5efef}
+.footer-copy p{margin-top:1.5em;font-size:.9em;color:#f3efef;font-style:italic}
+.footer-socials{margin-top:1em}
+.footer-socials a{
+  margin:0 10px;padding:8px 16px;border-radius:30px;font-weight:700;display:inline-block;
+  transition:all var(--t-fast) ease;
+}
+.facebook{background:#3b5998;color:var(--c-white)}
+.instagram{background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);color:var(--c-white)}
+.whatsapp{background:#25d366;color:var(--c-white)}
+.footer-socials a:hover{transform:scale(1.1);box-shadow:var(--glow-sm)}
+
+
+
+
+
+
+/* ================== UTILIDADES ================== */
+
+
+
+/* Bot贸n ir arriba */
+.btn-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, purple, orange, red);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* 100% circular */
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(128, 0, 128, 0.4);
+  transition: transform var(--t-fast) ease, opacity var(--t-fast) ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+
+
+.btn-up:hover {
+  transform: scale(1.2) rotate(10deg);
+  box-shadow: 0 0 25px rgba(255, 69, 0, 0.8), 0 0 40px rgba(128, 0, 128, 0.6);
+}
+
+.btn-up.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+/* ================== BOT脫N WHATSAPP ================== */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* 馃敼 Se ubica al lado izquierdo */
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.6), 0 0 30px rgba(18, 140, 126, 0.4);
+  transition: transform var(--t-fast) ease, opacity var(--t-fast) ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.2) rotate(-10deg);
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.8), 0 0 40px rgba(18, 140, 126, 0.6);
+}
+
+
+
+
+/* ================== RESPONSIVE ================== */
+@media (max-width:1000px){ .contenedor-imagenes{width:95%} }
+@media (max-width:700px){
+  .contenedor-imagenes .imagen{width:48%}
+  .imagen.grande{width:100%;height:300px}
+}
+@media (max-width:450px){
+  .contenedor-imagenes .imagen{width:100%}
+  .contenedor-imagenes .imagen .overlay{opacity:1;transform:translateY(0)}
+}
+
+
+
+/* ================== COLORES PERSONALIZADOS POR SECCIóN ================== */
+
+/* Título de la sección Playlist */
+.playlist h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  text-shadow:
+    0 0 8px #00bfff,
+    0 0 16px #8a2be2;
+  margin-bottom: 1.5rem;
+}
+
+/* Título de la sección Timeline */
+.timeline h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  text-shadow:
+    0 0 8px #ff00cc,
+    0 0 16px #00fff7;
+  margin-bottom: 1.5rem;
+}
+
+/* Título de la sección Comunidad o cualquier otra */
+.community h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  text-shadow:
+    0 0 8px #00ff99,
+    0 0 16px #ffcc00;
+  margin-bottom: 1.5rem;
+}
+
+/* Mantén tu dise?o original del “Vota por tu video favorito” */
+.vote-section h2 {
+  /* No se modifica este bloque */
+}
