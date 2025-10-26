@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia del K-Pop</title>
+  <meta name="description" content="Explora la historia del K-Pop: BTS, Stray Kids, ATEEZ y más. Música, videos y galería interactiva.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+
+<main> <!-- ⬅️ Inicio del contenedor principal -->
+<!-- ================= HEADER ================= -->
+<header>
+  <h1 class="titulo-neon">
+    <span class="neon letra1">H</span>
+    <span class="neon letra2">i</span>
+    <span class="neon letra3">s</span>
+    <span class="neon letra4">t</span>
+    <span class="neon letra5">o</span>
+    <span class="neon letra6">r</span>
+    <span class="neon letra7">i</span>
+    <span class="neon letra8">a</span>
+    &nbsp;
+    <span class="neon letra9">K</span>
+    <span class="neon letra10">-</span>
+    <span class="neon letra11">P</span>
+    <span class="neon letra12">o</span>
+    <span class="neon letra13">p</span>
+  </h1>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="galeria.html">Galería</a>
+    <a href="musica.html">Música</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contáctenos</a>
+
+    <!-- 🔹 Botones de login y registro (parte nueva) -->
+    <a href="login.html" class="nav-auth login-link" id="loginLink">
+      <i class="fa-solid fa-right-to-bracket"></i>
+      <span class="label-auth">Login</span>
+    </a>
+
+  
+</header>
+
+  <!-- ================= INTRO ================= -->
+  <section id="intro" class="intro">
+    <div class="intro-content">
+      <h2 class="titulo-intro">K-Pop: <span class="resaltado">Una Revolución Musical</span></h2>
+      <p id="typing-text"></p>
+      <a href="#galeria" class="btn-intro hidden">Conocer más</a>
+    </div>
+
+    <!-- Logos flotando -->
+    <img src="img/bts-logo.png" alt="Logo de BTS" class="logo-float logo-bts1">
+    <img src="img/straykids-logo.png" alt="Logo de Stray Kids" class="logo-float logo-sk1">
+    <img src="img/ateez-logo.png" alt="Logo de ATEEZ" class="logo-float logo-atz1">
+  </section>
+  
+  
+  
+  
+  
+  <!-- ================= GALERÍA ================= -->
+  <section id="galeria">
+    <h2 class="titulo-galeria">🎶 Galería de Bandas</h2>
+    <p class="subtitulo">Presiona el título para escuchar la introducción 🎧</p>
+
+    <div class="grid">
+      <!-- BTS -->
+      <article class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/bts1.jpg" alt="Integrantes de BTS">
+          </div>
+          <div class="card-back">
+            <h3>BTS</h3>
+            <p>“Bangtan Sonyeondan” revolucionó el K-Pop con letras profundas y mensajes de esperanza.</p>
+            <button class="play-audio" data-audio="audio/bts.mp3">▶ Escuchar</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Stray Kids -->
+      <article class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/straykids1.jpg" alt="Integrantes de Stray Kids">
+          </div>
+          <div class="card-back">
+            <h3>Stray Kids</h3>
+            <p>El grupo de JYP destaca por su energía, estilo innovador y letras motivacionales.</p>
+            <button class="play-audio" data-audio="audio/straykids.mp3">▶ Escuchar</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ATEEZ -->
+      <article class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/ateez1.jpg" alt="Integrantes de ATEEZ">
+          </div>
+          <div class="card-back">
+            <h3>ATEEZ</h3>
+            <p>ATEEZ es sinónimo de performance intensa y aventuras musicales globales.</p>
+            <button class="play-audio" data-audio="audio/ateez.mp3">▶ Escuchar</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Audios ocultos -->
+  <audio id="player" hidden></audio>
+  <audio id="intro-galeria" src="audio/intro-galeria.mp3" hidden></audio>
+
+  
+  
+  
+  <!-- ================= MÚSICA ================= -->
+ <section id="musica" class="music-section">
+  <div class="music-collage">
+
+    <!-- DJ -->
+    <div class="image-container dj-image">
+      <img src="img/Girls’ Generation.jpg" alt="DJ mezclando música">
+      <div class="overlay">
+        <div class="overlay-text">
+          <h3>Girls’ Generation</h3>
+          <p>"Las reinas del KPOP que abrieron el camino al éxito global de los grupos femeninos."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Texto central -->
+    <div class="text-section">
+            <p class="description">
+        "El KPOP no se limita a unas pocas bandas. Aunque aquí destacamos a BTS, ATEEZ y Stray Kids, existen muchos otros grupos que han dejado huella en la música, la moda y la cultura global."
+      </p>
+      <h2 class="main-title">La música es vida</h2>
+      <p class="description">
+        "Cada grupo aporta su esencia al KPOP. Desde los pioneros hasta las nuevas generaciones, la industria sigue creciendo y conquistando corazones alrededor del mundo."
+      </p>
+    </div>
+
+    <!-- Guitarrista -->
+    <div class="image-container guitarist-image">
+      <img src="img/BIGBANG.jpg" alt="Guitarrista en vivo">
+      <div class="overlay">
+        <div class="overlay-text">
+          <h3>BIGBANG</h3>
+          <p>"Pioneros del estilo único y de los grandes himnos que revolucionaron la industria."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banda -->
+    <div class="image-container band-image">
+      <img src="img/BLACKPINK.jpg" alt="Banda tocando">
+      <div class="overlay">
+        <div class="overlay-text">
+          <h3>BLACKPINK</h3>
+          <p>La fuerza de un grupo crea momentos inolvidables.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Multitud -->
+    <div class="image-container crowd-image">
+      <img src="img/EXO.jpg" alt="Multitud en concierto">
+      <div class="overlay">
+        <div class="overlay-text">
+          <h3>EXO</h3>
+          <p>El público convierte cada concierto en una experiencia única.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+  <!-- ================= VIDEO ================= -->
+  <section id="video">
+    <h2>🎬 Conoce un poco mas</h2>
+    <div class="video-container">
+      <video id="kpop-video" controls poster="img/video-poster.jpg">
+        <source src="video/historia-del-k-pop.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+  </section>
+  
+<br>
+<br>
+<br>
+<br>
+
+
+
+</main> <!-- ⬅️ Cierre del contenedor principal -->
+
+
+
+
+<!-- Botón WhatsApp -->
+<a href="https://wa.me/573044351353" class="btn-whatsapp" target="_blank" aria-label="Chatea por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-info">
+    <p><strong>Jennifer Daiana Villabona</strong></p>
+    <p>Programa de Desarrollo Web y Multimedia</p>
+    <p>Ficha 2477-124 | Proyecto Laboratorio Práctico</p>
+  </div>
+
+  <div class="footer-socials">
+    <a href="https://facebook.com" target="_blank" class="social facebook">🌐 Facebook</a>
+    <a href="https://instagram.com" target="_blank" class="social instagram">📸 Instagram</a>
+    <a href="https://wa.me/573044351353" target="_blank" class="social whatsapp">💬 WhatsApp</a>
+  </div>
+
+  <div class="footer-copy">
+    <p>✨ Desarrollado por <strong>Jennifer Daiana Villabona Peña</strong> © 2025 ✨</p>
+  </div>
+  
+  <div class="header-right">
+  <span>¿Ya tienes cuenta? <a href="login.html#login">Inicia sesión</a></span>
+</div>
+
+  
+  
+</footer>
+
+
+
+  <script src="js/script.js"></script>
+  
+  
+ 
+  
+  
+  
+</body>
+</html>
