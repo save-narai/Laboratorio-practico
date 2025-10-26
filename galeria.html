@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galería BTS – Historia del K-Pop</title>
+  <meta name="description" content="Explora una galería visual de BTS: miembros, momentos clave y su impacto global en el K-Pop." />
+  <link rel="stylesheet" href="css/galeria.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+
+
+
+
+<main> <!-- ⬅️ Inicio del contenedor principal -->
+
+
+  <!-- NAV con título + menús -->
+  <nav role="navigation" aria-label="Principal">
+    <h1 class="titulo-neon">Tu galería K-Pop favorita</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="galeria.html">Galería</a>
+    <a href="musica.html">Música</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contáctenos</a>
+
+    <!-- 🔹 Botones de login y registro -->
+    <a href="login.html" class="nav-auth login-link" id="loginLink">
+      <i class="fa-solid fa-right-to-bracket"></i>
+      <span class="label-auth">Entrar</span>
+    </a>
+
+
+</header>
+  <main>
+  
+  
+  <br>
+    <br>
+
+  
+  
+  
+  
+
+    <!-- Galería BTS -->
+    <section class="galeria">
+      <div class="contenedor-imagenes">
+        <div class="imagen grande">
+          <img src="img/1 (2).jpg" alt="BTS en su debut en escenario" loading="lazy" />
+          <div class="overlay">
+		  <h2>BTS</h2>
+            <p>
+              "Desde su debut en 2013, BTS pasó de ser un grupo de jóvenes soñadores a convertirse en embajadores globales de la música. Cada miembro aporta su estilo único: letras profundas, mensajes de amor propio y actuaciones llenas de energía. No solo revolucionaron el K-POP, sino que rompieron fronteras culturales, llevando su voz a escenarios como la ONU y convirtiéndose en símbolo de esperanza para millones de fans alrededor del mundo."
+            </p>
+          </div>
+        </div>
+
+        <div class="imagen">
+          <img src="img/1 (3).jpg" alt="RM de BTS" loading="lazy" />
+          <div class="overlay">
+            <h2>RM (Kim Namjoon):</h2>
+            <p>Líder y rapero principal, conocido por su inteligencia y letras profundas.</p>
+          </div>
+        </div>
+
+        <div class="imagen">
+          <img src="img/1 (4).jpg" alt="Jin de BTS" loading="lazy" />
+          <div class="overlay">
+            <h2>Jin (Kim Seokjin):</h2>
+            <p>Vocalista y “Worldwide Handsome”, aporta carisma y sensibilidad al grupo.</p>
+          </div>
+        </div>
+
+        <div class="imagen">
+          <img src="img/1 (5).jpg" alt="Suga de BTS" loading="lazy" />
+          <div class="overlay">
+            <h2>Suga (Min Yoongi):</h2>
+            <p>Rapero y productor, maestro en transmitir emociones a través de la música.</p>
+          </div>
+        </div>
+
+        <div class="imagen">
+          <img src="img/1 (6).jpg" alt="J-Hope de BTS" loading="lazy" />
+          <div class="overlay">
+            <h2>J-Hope (Jung Hoseok):</h2>
+            <p>Rapero y bailarín, energía positiva y coreografías icónicas.</p>
+          </div>
+        </div>
+
+        <div class="imagen">
+          <img src="img/1 (7).jpg" alt="Jimin de BTS" loading="lazy" />
+          <div class="overlay">
+            <h2>Jimin (Park Jimin):</h2>
+            <p>Vocalista y bailarín, famoso por su delicadeza y pasión en el escenario.</p>
+          </div>
+        </div>
+
+        <div class="imagen">
+          <img src="img/1 (8).jpg" alt="V de BTS" loading="lazy" />
+          <div class="overlay">
+            <h2>V (Kim Taehyung):</h2>
+            <p>Vocalista con voz única y estilo artístico inconfundible.</p>
+          </div>
+        </div>
+
+        <div class="imagen">
+          <img src="img/1 (9).jpg" alt="Jungkook de BTS" loading="lazy" />
+          <div class="overlay">
+            <h2>Jungkook (Jeon Jungkook):</h2>
+            <p>Maknae, vocalista principal y “golden boy” por su talento versátil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECCIÓN DE REVELADO (botón + galería personal + mensaje) -->
+    <section id="presentacion" class="reveal-area">
+      <div class="v-align">
+        <div class="hero-btn">
+          <!-- Botón toggle con icono y etiqueta -->
+          <button id="btnReveal" class="btn btn-reveal" type="button" aria-pressed="false" aria-live="polite">
+            <span class="btn-icon" aria-hidden="true"></span>
+            <span class="btn-label">Presiona para ver</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Galería personal en "masonry" -->
+      <div id="galleryContainer" class="Container ocultar masonry" aria-label="Galería personal">
+        <!-- Tarjeta destacada -->
+        <article class="Picture featured">
+          <img class="Picture-img" src="img/foto_presentacion.jpg" alt="Presentación de la banda" loading="lazy" />
+          <div class="Picture-note">
+            <h3>ATEEZ (에이티즈)</h3>
+            <p>
+              "Debutaron en 2018 y rápidamente se ganaron el título de ‘reyes de la performance’. Su historia es la de ocho jóvenes que transformaron sueños en espectáculos épicos, con conceptos llenos de aventura y exploración. ATEEZ no solo destaca por su talento vocal y escénico, sino también por conectar con sus fans a través de mensajes de valentía, libertad y pasión."
+            </p>
+          </div>
+        </article>
+		
+		
+		
+
+        <!-- 8 tarjetas -->
+        <article class="Picture">
+          <img class="Picture-img" src="img/foto1.jpg" alt="Hongjoong" loading="lazy" />
+          <div class="Picture-note"><h3>Hongjoong:</h3><p>Líder y productor, creativo y visionario del grupo.</p></div>
+        </article>
+        <article class="Picture">
+          <img class="Picture-img" src="img/foto2.jpg" alt="Seonghwa" loading="lazy" />
+          <div class="Picture-note"><h3>Seonghwa:</h3><p>Vocalista y bailarín, símbolo de elegancia y madurez.</p></div>
+        </article>
+        <article class="Picture">
+          <img class="Picture-img" src="img/foto3.jpg" alt="Yunho" loading="lazy" />
+          <div class="Picture-note"><h3>Yunho:</h3><p>Bailarín principal, lleno de energía y optimismo.</p></div>
+        </article>
+        <article class="Picture">
+          <img class="Picture-img" src="img/foto4.jpg" alt="Yeosang" loading="lazy" />
+          <div class="Picture-note"><h3>Yeosang:</h3><p>Vocalista y visual, destaca por su presencia magnética.</p></div>
+        </article>
+        <article class="Picture">
+          <img class="Picture-img" src="img/foto5.jpg" alt="San" loading="lazy" />
+          <div class="Picture-note"><h3>San:</h3><p>Vocalista con intensidad emocional y expresividad única.</p></div>
+        </article>
+        <article class="Picture">
+          <img class="Picture-img" src="img/foto6.jpg" alt="Mingi" loading="lazy" />
+          <div class="Picture-note"><h3>Mingi:</h3><p>Rapero con voz poderosa y estilo explosivo.</p></div>
+        </article>
+        <article class="Picture">
+          <img class="Picture-img" src="img/foto7.jpg" alt="Wooyoung" loading="lazy" />
+          <div class="Picture-note"><h3>Wooyoung:</h3><p>Bailarín y vocalista, carismático y lleno de chispa en el escenario.</p></div>
+        </article>
+        <article class="Picture">
+          <img class="Picture-img" src="img/foto8.jpg" alt="Jongho" loading="lazy" />
+          <div class="Picture-note"><h3>Jongho:</h3><p>Vocalista principal, reconocido por su potencia vocal y emotividad.</p></div>
+        </article>
+      </div>
+
+      <!-- Mensaje -->
+      <h2 id="textoAmor" class="ocultar">ATEEZ (에이티즈)</h2>
+    </section>
+  </main>
+  
+  
+  
+ <!-- ================= SLIDER ESTILIZADO (HTML SOLO) ================= -->
+ 
+
+
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="list">
+      <!-- Primer slide especial -->
+      <div class="item active intro-slide">
+        <img src="img/img1.jpg" alt="Stray Kids">
+        <div class="intro-content">
+          <h2>Stray Kids (스트레이 키즈)</h2>
+          <p>
+            "Stray Kids nació en 2017 con una propuesta distinta: un grupo que escribe, compone y produce su propia música. 
+            Sus canciones transmiten lucha, juventud e identidad, reflejando la realidad de una generación que busca su camino. 
+            Con ritmos intensos y coreografías poderosas, se han consolidado como una voz auténtica y revolucionaria dentro del KPOP."
+          </p>
+        </div>
+      </div>
+
+            <div class="item">
+                <img src="img/img2.jpg">
+                <div class="content">
+                   
+                    <h2>Bang Chan:</h2>
+                    <p class="kpop-desc">
+                        Líder, productor y pilar creativo del grupo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/img3.jpg">
+                <div class="content">
+                   
+                    <h2>Lee Know (Minho):</h2>
+                   <p class="kpop-desc">
+                        Bailarín principal, perfeccionista y expresivo en el escenario.
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/img4.jpg">
+                <div class="content">
+                    
+                    <h2>Changbin:</h2>
+                  <p class="kpop-desc">
+                        Rapero con fuerza y compositor de letras llenas de intensidad.
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/img5.jpg">
+                <div class="content">
+                    
+                    <h2>Hyunjin:</h2>
+                   <p class="kpop-desc">
+					Bailarín y rapero, reconocido por su carisma y presencia escénica.
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/img6.jpg">
+                <div class="content">
+                  
+                    <h2>Han (Jisung):</h2>
+                    <p class="kpop-desc">
+                        Rapero y vocalista, creativo y multifacético en la música.
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/img7.jpg">
+                <div class="content">
+                    
+                    <h2>Felix:</h2>
+                   <p class="kpop-desc">
+                       Rapero con voz grave distintiva y energía brillante.
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/img8.jpg">
+                <div class="content">
+                    
+                    <h2>Seungmin:</h2>
+                    <p class="kpop-desc">
+					Vocalista de tono cálido, transmite cercanía en cada canción.
+					
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/img9.jpg">
+                <div class="content">
+                    
+                    <h2>I.N (Jeongin):</h2>
+                  <p class="kpop-desc">
+                       Maknae, vocalista joven que representa el crecimiento y la frescura del grupo.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+
+        <!-- thumbnails -->
+        <div class="thumbnail">
+            <div class="item active"><img src="img/img1.jpg"><div class="content">Stry Kids</div></div>
+            <div class="item"><img src="img/img2.jpg"><div class="content">Bang Chan</div></div>
+            <div class="item"><img src="img/img3.jpg"><div class="content">Lee Know</div></div>
+            <div class="item"><img src="img/img4.jpg"><div class="content">Changbin</div></div>
+            <div class="item"><img src="img/img5.jpg"><div class="content">Hyunjin</div></div>
+            <div class="item"><img src="img/img6.jpg"><div class="content">Han</div></div>
+            <div class="item"><img src="img/img7.jpg"><div class="content">Felix</div></div>
+            <div class="item"><img src="img/img8.jpg"><div class="content">Seungmin</div></div>
+            <div class="item"><img src="img/img9.jpg"><div class="content">I.N (Jeongin)</div></div>
+        </div>
+    </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- 🌌 Sección final - El Universo del KPOP -->
+
+<div class="final-gallery">
+  <!-- Tarjeta 1 -->
+  <div class="card reveal neon-pink" data-text="Millones de voces cantando al unísono en conciertos que hacen historia.">
+    <img src="img/concierto-kpop.jpg" alt="Concierto KPOP">
+    <div class="overlay"></div>
+    <div class="card__content">
+      <p class="card__title">El KPOP en vivo</p>
+      <p class="card__description typing"></p>
+    </div>
+  </div>
+
+  <!-- Tarjeta 2 -->
+  <div class="card reveal neon-purple" data-text="Más que música, el KPOP es unión y pasión compartida en todo el mundo.">
+    <img src="img/fans-kpop.jpg" alt="Fans KPOP">
+    <div class="overlay"></div>
+    <div class="card__content">
+      <p class="card__title">Una comunidad global</p>
+      <p class="card__description typing"></p>
+    </div>
+  </div>
+
+  <!-- Tarjeta 3 -->
+  <div class="card reveal neon-blue" data-text="Cada grupo aporta su esencia creando un mosaico de sonidos y emociones.">
+    <img src="img/diversidad-kpop.jpg" alt="Diversidad KPOP">
+    <div class="overlay"></div>
+    <div class="card__content">
+      <p class="card__title">Diversidad de estilos</p>
+      <p class="card__description typing"></p>
+    </div>
+  </div>
+
+  <!-- Tarjeta 4 -->
+  <div class="card reveal neon-orange" data-text="La historia apenas comienza... nuevas generaciones seguirán conquistando.">
+    <img src="img/futuro-kpop.jpg" alt="Futuro KPOP">
+    <div class="overlay"></div>
+    <div class="card__content">
+      <p class="card__title">El futuro del KPOP</p>
+      <p class="card__description typing"></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</main> <!-- ⬅️ Cierre del contenedor principal -->
+
+
+    
+  
+
+<!-- Botón WhatsApp -->
+<a href="https://wa.me/573044351353" class="btn-whatsapp" target="_blank" aria-label="Chatea por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-info">
+    <p><strong>Jennifer Daiana Villabona</strong></p>
+    <p>Programa de Desarrollo Web y Multimedia</p>
+    <p>Ficha 2477-124 | Proyecto Laboratorio Práctico</p>
+  </div>
+
+  <div class="footer-socials">
+    <a href="https://facebook.com" target="_blank" class="social facebook">🌐 Facebook</a>
+    <a href="https://instagram.com" target="_blank" class="social instagram">📸 Instagram</a>
+    <a href="https://wa.me/573044351353" target="_blank" class="social whatsapp">💬 WhatsApp</a>
+  </div>
+
+  <div class="footer-copy">
+    <p>✨ Desarrollado por <strong>Jennifer Daiana Villabona Peña</strong> © 2025 ✨</p>
+  </div>
+  
+  
+  <div class="header-right">
+  <span>¿Ya tienes cuenta? <a href="login.html#login">Inicia sesión</a></span>
+</div>
+
+</footer>
+
+  
+  
+<script src="js/script.js"></script>
+
+</body>
+</html>

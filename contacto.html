@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctanos - Historia del K-Pop</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <h1 class="titulo-neon">Contáctanos</h1>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="galeria.html">Galería</a>
+      <a href="musica.html">Música</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html" class="activo">Contáctenos</a>
+
+      <!-- 🔹 Botones de login y registro -->
+      <a href="login.html" class="nav-auth login-link">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <span class="label-auth">Entrar</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <section class="contacto-section">
+      
+      <!-- FORMULARIO -->
+      <div class="form-container">
+        <h2>Envíanos un mensaje</h2>
+
+        <!-- ✅ Ahora el formulario se envía a Formspree -->
+        <form action="https://formspree.io/f/xoqgyzpr" method="POST">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+
+          <label for="email">Correo</label>
+          <input type="email" name="email" placeholder="ejemplo@correo.com" required>
+
+          <label for="asunto">Asunto</label>
+          <input type="text" name="asunto" placeholder="Motivo de tu mensaje" required>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+
+          <!-- Opciones ocultas -->
+          <input type="hidden" name="_next" value="http://localhost/historia-kpop/gracias.html">
+          <input type="hidden" name="_captcha" value="false">
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <!-- MAPA GOOGLE -->
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15910.115369070012!2d-74.11216436931151!3d4.498205883157228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3fa3ce2f39ab55%3A0x2ccd2121a55447d9!2sPiscinas%20del%20Parque%20el%20Virrey%20Sur!5e0!3m2!1ses-419!2sco!4v1757984926557!5m2!1ses-419!2sco"
+          width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-info">
+      <p><strong>Jennifer Daiana Villabona</strong></p>
+      <p>Programa de Desarrollo Web y Multimedia</p>
+      <p>Ficha 2477-124 | Proyecto Laboratorio Práctico</p>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://facebook.com" target="_blank" class="social facebook">🌐 Facebook</a>
+      <a href="https://instagram.com" target="_blank" class="social instagram">📸 Instagram</a>
+      <a href="https://wa.me/573044351353" target="_blank" class="social whatsapp">💬 WhatsApp</a>
+    </div>
+
+    <div class="footer-copy">
+      <p>✨ Desarrollado por <strong>Jennifer Daiana Villabona Peña</strong> © 2025 ✨</p>
+    </div>
+
+    <div class="header-right">
+      <span>¿Ya tienes cuenta? <a href="login.html#login">Inicia sesión</a></span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
