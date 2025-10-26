@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso - Historia del K-Pop</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-left">
+      <a href="index.html" class="inicio-btn"><i class="fa-solid fa-house"></i> Inicio</a>
+    </div>
+
+  </header>
+
+  <!-- Main -->
+  <main class="wrap">
+    <!-- Columna izquierda -->
+    <section class="left">
+      <div class="card">
+        <h1 class="title">¡Comencemos!</h1>
+
+        <!-- Tabs -->
+        <div class="tabs" role="tablist" aria-label="Cambiar entre iniciar sesión y registrarse">
+          <button id="tab-login" class="tab active" role="tab" aria-controls="panel-login" aria-selected="true">Iniciar sesión</button>
+          <button id="tab-register" class="tab" role="tab" aria-controls="panel-register" aria-selected="false">Registrarse</button>
+        </div>
+
+        <!-- ===== LOGIN ===== -->
+        <div id="panel-login" class="panel active" role="tabpanel" aria-labelledby="tab-login">
+          <form action="procesar_login.php" method="POST">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="ejemplo@correo.com" required />
+
+            <label for="password">Contraseña</label>
+            <input id="password" name="password" type="password" placeholder="••••••••" required />
+
+            <div class="actions">
+              <button class="primary" type="submit">Iniciar sesión</button>
+              <button class="link" type="button">¿Olvidaste tu contraseña?</button>
+            </div>
+          </form>
+
+          <div class="socials" aria-label="Acceso con redes">
+            <button class="social-btn google" aria-label="Google"><i class="fab fa-google"></i></button>
+            <button class="social-btn facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></button>
+            <button class="social-btn instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></button>
+          </div>
+
+          <p class="terms">
+            Al iniciar sesión, aceptas los
+            <a href="#">Términos</a> y la
+            <a href="#">Política de privacidad</a>.
+          </p>
+        </div>
+
+        <!-- ===== REGISTRO ===== -->
+        <div id="panel-register" class="panel" role="tabpanel" aria-labelledby="tab-register">
+          <form action="procesar_registro.php" method="POST">
+            <div class="row">
+              <div>
+                <label for="name">Nombre</label>
+                <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+              </div>
+              <div>
+                <label for="username">Usuario</label>
+                <input id="username" name="username" type="text" placeholder="otakore_fan" required />
+              </div>
+            </div>
+
+            <label for="email2">Correo electrónico</label>
+            <input id="email2" name="email" type="email" placeholder="ejemplo@correo.com" required />
+
+            <div class="row">
+              <div>
+                <label for="pass1">Contraseña</label>
+                <input id="pass1" name="password" type="password" placeholder="Mín. 6 caracteres" required />
+              </div>
+              <div>
+                <label for="pass2">Confirmar contraseña</label>
+                <input id="pass2" name="confirm_password" type="password" placeholder="Repite la contraseña" required />
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="primary" type="submit">Crear cuenta</button>
+              <button class="link" type="button" id="switch-to-login">¿Ya tienes cuenta? Inicia sesión</button>
+            </div>
+          </form>
+
+<div class="socials" aria-label="Acceso con redes">
+  <button class="social-btn google" aria-label="Google" onclick="window.location.href='google_login.php'">
+    <i class="fab fa-google"></i>
+  </button>
+  <button class="social-btn facebook" aria-label="Facebook" onclick="window.location.href='facebook_login.php'">
+    <i class="fab fa-facebook-f"></i>
+  </button>
+  <button class="social-btn instagram" aria-label="Instagram" onclick="window.location.href='instagram_login.php'">
+    <i class="fab fa-instagram"></i>
+  </button>
+</div>
+
+          <p class="terms">
+            Al registrarte, aceptas los
+            <a href="#">Términos</a> y la
+            <a href="#">Política de privacidad</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Columna derecha (imagen decorativa) -->
+    <section class="right" aria-hidden="true"></section>
+  </main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-info">
+    <p><strong>Jennifer Daiana Villabona</strong></p>
+    <p>Programa de Desarrollo Web y Multimedia</p>
+    <p>Ficha 2477-124 | Proyecto Laboratorio Práctico</p>
+  </div>
+
+  <div class="footer-socials">
+    <a href="https://facebook.com" target="_blank" class="social facebook">🌐 Facebook</a>
+    <a href="https://instagram.com" target="_blank" class="social instagram">📸 Instagram</a>
+    <a href="https://wa.me/573044351353" target="_blank" class="social whatsapp">💬 WhatsApp</a>
+  </div>
+
+  <div class="footer-copy">
+    <p>✨ Desarrollado por <strong>Jennifer Daiana Villabona Peña</strong> © 2025 ✨</p>
+  </div>
+  
+      <div class="header-right">
+      <span>¿Ya tienes cuenta? <a href="#login" id="go-login">Inicia sesión</a></span>
+    </div>
+  
+  
+</footer>
+
+
+  <!-- Script -->
+
+
+
+<script>
+function switchTab(which) {
+  const map = { login:['tab-login','panel-login'], register:['tab-register','panel-register'] };
+  for (const k in map) {
+    const [tabId, panelId] = map[k];
+    const active = (k === which);
+    document.getElementById(tabId).classList.toggle('active', active);
+    document.getElementById(panelId).classList.toggle('active', active);
+    document.getElementById(tabId).setAttribute('aria-selected', active ? 'true' : 'false');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Detectar hash y cambiar de pestaña automáticamente
+  if (location.hash.includes('register')) {
+    switchTab('register');
+  } else {
+    switchTab('login');
+  }
+
+  // Permitir cambiar manualmente de pestaña
+  document.getElementById('tab-login').addEventListener('click', () => switchTab('login'));
+  document.getElementById('tab-register').addEventListener('click', () => switchTab('register'));
+});
+</script>
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
